@@ -1,0 +1,1 @@
+web: gunicorn humentum.wsgi --log-file -

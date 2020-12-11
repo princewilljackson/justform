@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Humentum</title>
+    <style>  
+        body{  
+          font-family: Calibri, Helvetica, sans-serif;  
+          background-color: white;  
+        }  
+        .container {  
+            padding: 50px;  
+          background-color: lightblue;  
+        }  
+          
+        input[type=text], input[type=password], textarea {  
+          width: 100%;  
+          padding: 15px;  
+          margin: 5px 0 22px 0;  
+          display: inline-block;  
+          border: none;  
+          background: #f1f1f1;  
+        }  
+        input[type=text]:focus, input[type=password]:focus {  
+          background-color: white;  
+          outline: none;  
+        }  
+         div {  
+                    padding: 10px 0;  
+                 }  
+        hr {  
+          border: 1px solid #f1f1f1;  
+          margin-bottom: 25px;  
+        }  
+        .registerbtn {  
+          background-color: #4CAF50;  
+          color: white;  
+          padding: 16px 20px;  
+          margin: 8px 0;  
+          border: none;  
+          cursor: pointer;  
+          width: 100%;  
+          opacity: 0.9;  
+        }  
+        .registerbtn:hover {  
+          opacity: 1;  
+        }  
+        img {
+          max-width: 60%;
+        }
+        img.thumbnail {
+          width: 50px;
+          height: 30px;
+        }
+    </style>  
+</head>
+<body>
+        {% load crispy_forms_tags %}
+        <form method="POST" enctype="multipart/form-data" class="container">  
+          {% csrf_token %}
+            <div class="container"> 
+            <center>  <h1> <img src="{% static 'logo.gif' %}"><br>Next of Kin Data Form</h1> </center>  
+            <hr>
+            {{ form | crispy }}
+
+            <label>
+                I certify that the above information are correct. <input type="checkbox"> 
+            </label> 
+            
+            <button type="submit" class="registerbtn">Submit</button>    
+        </form> 
+    
+</body>
+</html>

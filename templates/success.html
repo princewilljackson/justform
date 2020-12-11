@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Humentum</title>
+    <style>
+        body{  
+            font-family: Calibri, Helvetica, sans-serif;  
+            background-color: white;  
+            }  
+            .container {  
+            padding: 50px;  
+            background-color: lightblue;  
+            } 
+            hr {  
+                border: 1px solid #f1f1f1;  
+                margin-bottom: 25px;  
+              }  
+            img {
+                max-width: 60%;
+            }
+            img.thumbnail {
+            width: 50px;
+            height: 30px;
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>  <h1> <img src="{% static 'logo.gif' %}"><br>Next of Kin Data Form</h1> </center> 
+    <hr>
+    </div>
+    
+    <div class="container">
+        <center> <h2>Form Completed Successfully! Thank you. </h2> </center>
+    </div>
+    
+
+</body>
+</html>
